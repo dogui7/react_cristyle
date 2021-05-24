@@ -27,7 +27,7 @@ class DataNumbers extends React.Component{
         let valor;
         let cardProps;
         
-        if (this.state.productLength == ' ') {
+        if (this.state.productLength === ' ') {
             valor = <p>Cargando</p>
         } else {
             let productInDataBase = {

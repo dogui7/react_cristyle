@@ -17,11 +17,11 @@ class Main extends React.Component{
 		fetch('api/productos')
 		.then(respuesta =>{return respuesta.json()})
 		.then (productos => {
-			return productos.products [productos.products.length -1]
+			return productos.products[productos.products.length -1]
 		})
 		.then (product => {
 			let parts = product.detailURL.split ('/');
-			let url = 'api/productos/' + parts [parts.length -1];
+			let url = 'api/productos/' + parts[parts.length -1];
 			fetch (url).then (resp => {return resp.json()})
 			.then (producto => {
 				this.setState ( {nombre:producto.data.productToSend.name});
@@ -38,7 +38,7 @@ class Main extends React.Component{
 	render () {
 
 		let imageRoute;
-		if (this.state.imageSrc == '') {
+		if (this.state.imageSrc === '') {
 			imageRoute = '';
 		} else {
 			imageRoute = this.state.imageSrc;
@@ -58,7 +58,7 @@ class Main extends React.Component{
 									</div>
 									<div className="card-body">
 										<div className="text-center">
-											<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imageRoute} />
+											<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imageRoute} alt="Imagen de producto" />
 										</div>
 										<p className="h2"> <strong> {this.state.nombre} </strong> </p>
 										<p className="h4"> <strong> {this.state.descripcion} </strong> </p>
