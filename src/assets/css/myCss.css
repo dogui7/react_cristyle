@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poiret+One&display=swap');
+ 
+body{
+   font-family: "Poiret One", sans-serif !important;
+   color: #1b1b1b !important;
+}
+
+.border-left-card {
+   border-left:.25rem solid #be9e44!important;
+}
+
+.card-icon{
+   color: #be9e44!important;
+}
+
+.bg-dark{
+   background-color: #1b1b1b!important;
+}
